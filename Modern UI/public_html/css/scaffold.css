@@ -1,0 +1,46 @@
+
+.header {
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+}
+
+.header .container {
+
+}
+
+.header .container .title-box {
+    background-color: rgb(0, 0, 0);
+    float: left;
+    width: 230px;
+}
+
+.body {
+}
+
+.body .container {
+    background-color: #f8f8f8;
+    display: table;
+    width: 100%;
+}
+
+.body .container .left-column {
+    background-color: rgb(52, 73, 94);
+    border-left: 2px solid rgba(255, 255, 255, .3);
+    display: table-cell;
+    vertical-align: top;
+    width: 230px;
+}
+
+.body .container .left-column .content {
+
+}
+
+.body .container .main-column {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.body .container .main-column .content {
+    box-sizing: border-box;
+    padding: 15px;
+}

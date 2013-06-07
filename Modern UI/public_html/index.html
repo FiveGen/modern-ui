@@ -1,0 +1,118 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script src="js/libs/jquery-2.0.0.min.js"></script>
+        <script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery-toggleSwitch.js"></script>
+        <script type="text/javascript" src="js/buttons.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,600,700" rel="stylesheet" type="text/css">
+        <link href="css/scaffold.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <link href="css/form.css" rel="stylesheet" type="text/css" />
+        <link href="css/buttons.css" rel="stylesheet" type="text/css" />
+        <link href="css/breadcrumb.css" rel="stylesheet" type="text/css" />
+        <link href="css/typography.css" rel="stylesheet" type="text/css" />
+        <link href="css/navbar.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            $(function() {
+                $('#id-teste').toggleSwitch({
+                    'label': 'Opção 1',
+                    'checked': true
+                });
+                $('#id-teste2').toggleSwitch({
+                    'label': 'Opção 2',
+                    'checked': false
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <div class="header">
+                <div class="container">
+                    <div class="title-box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="container">
+                    <div class="left-column">
+                        <div class="content">
+                            <span class="navbar-title">
+                                Navegação
+                            </span>
+                            <ul class="navbar">
+                                <li><a>Cadastros</a></li>
+                                <li><a>Registros</a></li>
+                                <li><a>Relatórios</a></li>
+                                <li><a>Notificações</a></li>
+                                <li><a>Suporte</a></li>
+                                <li><a>Ajuda</a></li>
+                                <li><a>Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-column">
+                        <div class="breadcrumb">
+                            <ul>
+                                <li>Início</li>
+                                <li>Cadastro</li>
+                                <li>Aluno</li>
+                                <li>Ver todos</li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <h1>Cadastrar Aluno</h1>
+                            <form>
+                                <fieldset>
+                                    <legend>Dados Pessoais</legend>
+                                    <div class="row">
+                                        <div class="colspan6">
+                                            <label>Nome</label>
+                                            <input type="text" name="nome" />
+                                        </div>
+                                        <div class="colspan3">
+                                            <label>RG</label>
+                                            <input type="text" name="rg" />
+                                        </div>
+                                        <div class="colspan3">
+                                            <label>CPF</label>
+                                            <input type="text" name="cpf" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="colspan12">
+                                            <label>Endereço</label>
+                                            <input type="text" name="endereco" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset6 colspan4">
+                                            <label>Observação</label>
+                                            <input type="text" name="obs" />
+                                        </div>
+                                        <div class="colspan2">
+                                            <label>Outros</label>
+                                            <input type="text" name="outros" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

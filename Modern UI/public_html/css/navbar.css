@@ -1,0 +1,53 @@
+
+.navbar-title {
+    background-color: rgba(255, 255, 255, .5);
+    color: rgb(0, 0, 0);
+    display: block;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 30px;
+    padding-right: 15px;
+    position: relative;
+    text-align: right;
+}
+
+.navbar-title:after {
+    content: '';
+    background-image: url(../img/appbar.cursor.default.png);
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+ul.navbar {
+    list-style: none;
+    padding: 45px 15px 45px 0;
+    margin: 0;
+}
+
+ul.navbar li {
+    text-align: right;
+    margin-left: -2px;
+}
+
+ul.navbar li:hover {
+    cursor: pointer;
+    border-left: 2px solid rgb(255, 255, 255);
+}
+
+ul.navbar li a {
+    color: rgba(255, 255, 255, .7);
+    font-size: 22px;
+    font-weight: 300;
+}
+
+ul.navbar li:hover a {
+    color: rgba(255, 255, 255, 1);
+}
