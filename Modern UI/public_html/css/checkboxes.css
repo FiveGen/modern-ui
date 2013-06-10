@@ -1,0 +1,25 @@
+
+.checkbox-wrapper {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+}
+
+.checkbox-wrapper input[type=checkbox]{
+    display: none;
+}
+
+.checkbox-wrapper .checkbox {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(190, 190, 190);
+    box-sizing: border-box;
+    display: table-cell;
+    height: 16px;
+    width: 16px; 
+}
+
+.checkbox-wrapper .checkbox + label {
+    cursor: pointer;
+    padding-left: 10px;
+    display: table-cell;
+}

@@ -8,20 +8,22 @@ and open the template in the editor.
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <script src="js/libs/jquery-2.0.0.min.js"></script>
-        <script src="js/libs/jquery-ui-1.10.3.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery-toggleSwitch.js"></script>
-        <script type="text/javascript" src="js/buttons.js"></script>
-
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css' />
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,600,700" rel="stylesheet" type="text/css">
         <link href="css/scaffold.css" rel="stylesheet" type="text/css" />
         <link href="css/base.css" rel="stylesheet" type="text/css" />
         <link href="css/form.css" rel="stylesheet" type="text/css" />
         <link href="css/buttons.css" rel="stylesheet" type="text/css" />
-        <link href="css/breadcrumb.css" rel="stylesheet" type="text/css" />
+        <link href="css/radios.css" rel="stylesheet" type="text/css" />
+        <link href="css/breadcrumbs.css" rel="stylesheet" type="text/css" />
         <link href="css/typography.css" rel="stylesheet" type="text/css" />
         <link href="css/navbar.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/libs/jquery-2.0.0.min.js" type="text/javascript"></script>
+        <script src="js/libs/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+        <script src="js/plugins/jquery-toggleSwitch.js" type="text/javascript"></script>
+        <script src="js/buttons.js" type="text/javascript"></script>
+        <script src="js/radios.js" type="text/javascript"></script>
 
         <script>
             $(function() {
@@ -108,6 +110,30 @@ and open the template in the editor.
                                         </div>
                                     </div>
                                 </fieldset>
+                                <div class="row">
+                                    <div class="colspan6">
+                                        <fieldset>
+                                            <legend>Radios</legend>
+                                            <input id="radio1" type="radio" value="radio1" name="radio" />
+                                            <label for="radio1">Radio1</label>
+                                            <input id="radio2" type="radio" value="radio2" name="radio" />
+                                            <label for="radio2">Radio2</label>
+                                            <input id="radio3" type="radio" value="radio3" name="radio" />
+                                            <label for="radio3">Radio3</label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="colspan6">
+                                        <fieldset>
+                                            <legend>Checkboxes</legend>
+                                            <input id="chk1" type="checkbox" value="checkbox1" name="checkbox1" />
+                                            <label for="chk1">Checkbox1</label>
+                                            <input id="chk2" type="checkbox" value="checkbox2" name="checkbox2" />
+                                            <label for="chk2">Checkbox2</label>
+                                            <input id="chk3" type="checkbox" value="checkbox3" name="checkbox3" />
+                                            <label for="chk3">Checkbox3</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

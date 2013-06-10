@@ -50,7 +50,7 @@ textarea:focus {
     outline: none;
 }
 
-input[type=radio] {
+/*input[type=radio] {
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 16px;
@@ -80,9 +80,9 @@ input[type=radio]:disabled {
 input[type=radio]:disabled + label {
     cursor: default;
     color: rgb(230, 230, 230);
-}
+}*/
 
-.radio-wrapper {
+/*.radio-wrapper {
     display: table;
     border-collapse: separate;
     border-spacing: 0 3px;
@@ -96,7 +96,7 @@ input[type=radio]:disabled + label {
     cursor: pointer;
     padding-left: 10px;
     display: table-cell;
-}
+}*/
 
 /*Toggle switch*/
 .toggle-switch-wrapper {
