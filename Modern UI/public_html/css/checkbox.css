@@ -23,3 +23,12 @@
     padding-left: 10px;
     display: table-cell;
 }
+
+.checkbox-wrapper .checkbox.hover {
+    border: 2px solid rgb(190, 190, 190);
+    cursor: pointer;
+}
+
+.checkbox-wrapper .checkbox.checked {
+    background: url(../img/checkbox-checked.png) no-repeat center center, rgb(255, 255, 255);
+}

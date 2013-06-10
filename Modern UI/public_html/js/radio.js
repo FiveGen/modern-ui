@@ -43,10 +43,10 @@ var radio = {
         $(this.config.wrapperSelector).on('click', function() {
             $(this).siblings(radio.config.wrapperSelector)
                 .children(radio.config.virtualRadioSelector).removeClass('checked')
-                .end().children(radio.config.selector).prop('checked', false);
+                .siblings(radio.config.selector).prop('checked', false);
 
             $(this).children(radio.config.virtualRadioSelector).addClass('checked')
-                .end().children(radio.config.selector).prop('checked', true);
+                .siblings(radio.config.selector).prop('checked', true);
         });
         return this;
     }
