@@ -16,7 +16,7 @@ var checkbox = {
         wrapperSelector: '.checkbox-wrapper',
         virtualClass: 'checkbox',
         virtualElem: '<span>',
-        virtualSelector: '.checkbox-wrapper .checkbox',
+        virtualSelector: '.checkbox',
         hoverClass: 'hover',
         checkedClass: 'checked'
     },
@@ -46,12 +46,13 @@ var checkbox = {
     },
     click: function() {
         var cfg = this.config;
-        $(cfg.wrapperSelector).on('click', function(e) {
+        $(cfg.wrapperSelector).children().on('click', function(e) {
             e.preventDefault();
+        });
+        $(cfg.wrapperSelector).on('click', function() {
             var checkbox = $(this).children(cfg.selector),
                 isChecked = checkbox.is(':checked');
 
-            console.log(isChecked);
             if (!isChecked) {
                 checkbox.siblings(cfg.virtualSelector).addClass(cfg.checkedClass);
             } else {

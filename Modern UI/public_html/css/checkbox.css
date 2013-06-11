@@ -1,8 +1,18 @@
 
 .checkbox-wrapper {
+    display: block;
+}
+
+.checkbox-wrapper:after {
+    content: '';
+    clear: both;
     display: table;
-    border-collapse: separate;
-    border-spacing: 0 3px;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-wrapper + .checkbox-wrapper {
+    margin-top: 5px;
 }
 
 .checkbox-wrapper input[type=checkbox]{
@@ -10,18 +20,23 @@
 }
 
 .checkbox-wrapper .checkbox {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(190, 190, 190);
     box-sizing: border-box;
-    display: table-cell;
+    float: left;
     height: 16px;
     width: 16px; 
 }
 
 .checkbox-wrapper .checkbox + label {
     cursor: pointer;
-    padding-left: 10px;
-    display: table-cell;
+    float: left;
+    line-height: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 .checkbox-wrapper .checkbox.hover {

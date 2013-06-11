@@ -16,7 +16,7 @@ var radio = {
         wrapperSelector: '.radio-wrapper',
         virtualRadioClass: 'radio',
         virtualRadioElem: '<span>',
-        virtualRadioSelector: '.radio-wrapper .radio',
+        virtualRadioSelector: '.radio',
         hoverClass: 'hover',
         checkedClass: 'checked'
     },
@@ -43,8 +43,10 @@ var radio = {
     },
     click: function() {
         var cfg = this.config;
-        $(cfg.wrapperSelector).on('click', function(e) {
+        $(cfg.wrapperSelector).children().on('click', function(e) {
             e.preventDefault();
+        });
+        $(cfg.wrapperSelector).on('click', function(e) {
             $(this).siblings(cfg.wrapperSelector)
                 .children(cfg.virtualRadioSelector).removeClass(cfg.checkedClass)
                 .siblings(cfg.selector).prop('checked', false);

@@ -4,16 +4,13 @@ input[type=button],
 input[type=submit],
 input[type=reset],
 button {
-    border-radius: 3px;
     border: none;
     display: inline-block;
     font-family: 'Open Sans';
     font-size: 13px;
-    height: 24px;
-    line-height: 18px;
-    padding: 3px 15px;
-    position: relative;
-    vertical-align: middle;
+    font-weight: 400;
+    padding: 5px 20px;
+    border-radius: 4px;
 }
 
 /*Colors*/
@@ -21,9 +18,8 @@ input[type=button],
 input[type=submit],
 input[type=reset],
 button {
-    background-color: rgb(236, 240, 241);
-    box-shadow: 0 2px 0 0 rgb(196, 200, 201);
-    color: rgb(80, 80, 80);
+    background-color: rgb(189, 195, 199);
+    color: rgb(255, 255, 255);
 }
 
 input[type=button].green,
@@ -31,7 +27,6 @@ input[type=submit].green,
 input[type=reset].green,
 button.green {
     background-color: rgb(46, 204, 113);
-    box-shadow: 0 2px 0 0 rgb(6, 164, 73);
     color: rgb(255, 255, 255);
 }
 
@@ -40,7 +35,6 @@ input[type=submit].blue,
 input[type=reset].blue,
 button.blue {
     background-color: rgb(52, 152, 219);
-    box-shadow: 0 2px 0 0 rgb(12, 112, 179);
     color: rgb(255, 255, 255);
 }
 
@@ -49,7 +43,6 @@ input[type=submit].pink,
 input[type=reset].pink,
 button.pink {
     background-color: rgb(155, 89, 182);
-    box-shadow: 0 2px 0 0 rgb(115, 49, 142);
     color: rgb(255, 255, 255);
 }
 
@@ -58,7 +51,6 @@ input[type=submit].black,
 input[type=reset].black,
 button.black {
     background-color: rgb(52, 73, 94);
-    box-shadow: 0 2px 0 0 rgb(12, 33, 54);
     color: rgb(255, 255, 255);
 }
 
@@ -67,7 +59,6 @@ input[type=submit].yellow,
 input[type=reset].yellow,
 button.yellow {
     background-color: rgb(241, 196, 15);
-    box-shadow: 0 2px 0 0 rgb(201, 156, 0);
     color: rgb(255, 255, 255);
 }
 
@@ -76,7 +67,6 @@ input[type=submit].orange,
 input[type=reset].orange,
 button.orange {
     background-color: rgb(230, 126, 34);
-    box-shadow: 0 2px 0 0 rgb(190, 86, 0);
     color: rgb(255, 255, 255);
 }
 
@@ -85,7 +75,6 @@ input[type=submit].red,
 input[type=reset].red,
 button.red {
     background-color: rgb(231, 76, 60);
-    box-shadow: 0 2px 0 0 rgb(191, 36, 20);
     color: rgb(255, 255, 255);
 }
 
@@ -94,8 +83,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 button:hover {
-    background-color: rgb(246, 250, 251);
-    box-shadow: 0 2px 0 0 rgb(206, 210, 211);
+    background-color: rgb(149, 165, 166);
     cursor: pointer;
 }
 
@@ -103,8 +91,7 @@ input[type=button].green:hover,
 input[type=submit].green:hover,
 input[type=reset].green:hover,
 button.green:hover {
-    background-color: rgb(66, 224, 133);
-    box-shadow: 0 2px 0 0 rgb(26, 184, 93);
+    background-color: rgb(39, 174, 96);
     cursor: pointer;
 }
 
@@ -112,8 +99,7 @@ input[type=button].blue:hover,
 input[type=submit].blue:hover,
 input[type=reset].blue:hover,
 button.blue:hover {
-    background-color: rgb(72, 172, 239);
-    box-shadow: 0 2px 0 0 rgb(32, 132, 199);
+    background-color: rgb(41, 128, 185);
     cursor: pointer;
 }
 
@@ -121,8 +107,7 @@ input[type=button].pink:hover,
 input[type=submit].pink:hover,
 input[type=reset].pink:hover,
 button.pink:hover {
-    background-color: rgb(175, 109, 202);
-    box-shadow: 0 2px 0 0 rgb(135, 69, 162);
+    background-color: rgb(142, 68, 173);
     cursor: pointer;
 }
 
@@ -130,8 +115,7 @@ input[type=button].black:hover,
 input[type=submit].black:hover,
 input[type=reset].black:hover,
 button.black:hover {
-    background-color: rgb(72, 93, 114);
-    box-shadow: 0 2px 0 0 rgb(32, 53, 74);
+    background-color: rgb(44, 62, 80);
     cursor: pointer;
 }
 
@@ -139,8 +123,7 @@ input[type=button].yellow:hover,
 input[type=submit].yellow:hover,
 input[type=reset].yellow:hover,
 button.yellow:hover {
-    background-color: rgb(255, 216, 35);
-    box-shadow: 0 2px 0 0 rgb(221, 176, 20);
+    background-color: rgb(243, 156, 18);
     cursor: pointer;
 }
 
@@ -148,8 +131,7 @@ input[type=button].orange:hover,
 input[type=submit].orange:hover,
 input[type=reset].orange:hover,
 button.orange:hover {
-    background-color: rgb(250, 146, 54);
-    box-shadow: 0 2px 0 0 rgb(210, 106, 20);
+    background-color: rgb(211, 84, 0);
     cursor: pointer;
 }
 
@@ -157,8 +139,7 @@ input[type=button].red:hover,
 input[type=submit].red:hover,
 input[type=reset].red:hover,
 button.red:hover {
-    background-color: rgb(251, 96, 80);
-    box-shadow: 0 2px 0 0 rgb(211, 56, 40);
+    background-color: rgb(192, 57, 43);
     cursor: pointer;
 }
 
