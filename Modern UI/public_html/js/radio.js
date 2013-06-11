@@ -16,37 +16,41 @@ var radio = {
         wrapperSelector: '.radio-wrapper',
         virtualRadioClass: 'radio',
         virtualRadioElem: '<span>',
-        virtualRadioSelector: '.radio-wrapper .radio'
+        virtualRadioSelector: '.radio-wrapper .radio',
+        hoverClass: 'hover',
+        checkedClass: 'checked'
     },
     init: function() {
-        this.wrap()
+        this.wrapper()
             .hover()
             .click();
     },
-    wrap: function() {
-        $(this.config.selector).each(function() {
-            $(this).after(radio.config.virtualRadioElem).next().addClass(radio.config.virtualRadioClass);
-            $(this).nextUntil(radio.config.selector).andSelf()
-                .wrapAll(radio.config.wrapperElem).parent().addClass(radio.config.wrapperClass);
+    wrapper: function() {
+        var cfg = this.config;
+        $(cfg.selector).each(function() {
+            $(this).after(cfg.virtualRadioElem).next().addClass(cfg.virtualRadioClass);
+            $(this).nextUntil(cfg.selector).andSelf()
+                .wrapAll(cfg.wrapperElem).parent().addClass(cfg.wrapperClass);
         });
         return this;
     },
     hover: function() {
-        $(this.config.wrapperSelector).hover(function() {
-            $(this).children(radio.config.virtaulRadioSelector).addClass('hover');
-        }, function() {
-            $(this).children(radio.config.virtaulRadioSelector).removeClass('hover');
+        var cfg = this.config;
+        $(cfg.wrapperSelector).hover(function() {
+            $(this).children(cfg.virtaulRadioSelector).toggleClass(cfg.hoverClass);
         });
         return this;
     },
     click: function() {
-        $(this.config.wrapperSelector).on('click', function() {
-            $(this).siblings(radio.config.wrapperSelector)
-                .children(radio.config.virtualRadioSelector).removeClass('checked')
-                .siblings(radio.config.selector).prop('checked', false);
+        var cfg = this.config;
+        $(cfg.wrapperSelector).on('click', function(e) {
+            e.preventDefault();
+            $(this).siblings(cfg.wrapperSelector)
+                .children(cfg.virtualRadioSelector).removeClass(cfg.checkedClass)
+                .siblings(cfg.selector).prop('checked', false);
 
-            $(this).children(radio.config.virtualRadioSelector).addClass('checked')
-                .siblings(radio.config.selector).prop('checked', true);
+            $(this).children(cfg.virtualRadioSelector).addClass(cfg.checkedClass)
+                .siblings(cfg.selector).prop('checked', true);
         });
         return this;
     }

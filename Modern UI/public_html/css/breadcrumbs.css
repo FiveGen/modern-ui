@@ -30,12 +30,11 @@
 }
 
 .breadcrumb ul li:not(:last-of-type):after {
+    background: url(../img/breadcrumb-separator.png) no-repeat center center;
     content: '';
-    width: 8px;
-    height: 8px;
-    background: url(../img/breadcrumb-arrow.png) no-repeat center center;
-    background-size: 8px;
+    height: 30px;
     position: absolute;
-    top: 11px;
-    right: -16px;
+    right: -15px;
+    top: 0;
+    width: 9px;
 }

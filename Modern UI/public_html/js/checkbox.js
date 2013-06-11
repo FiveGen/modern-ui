@@ -21,11 +21,11 @@ var checkbox = {
         checkedClass: 'checked'
     },
     init: function() {
-        this.wrap()
+        this.wrapper()
             .hover()
             .click();
     },
-    wrap: function() {
+    wrapper: function() {
         var cfg = this.config;
         $(cfg.selector).each(function() {
             $(this).after(cfg.virtualElem)
@@ -40,27 +40,24 @@ var checkbox = {
     hover: function() {
         var cfg = this.config;
         $(cfg.wrapperSelector).hover(function() {
-            $(this).children(cfg.virtualSelector).addClass(cfg.hoverClass);
-        }, function() {
-            $(this).children(cfg.virtualSelector).removeClass(cfg.hoverClass);
+            $(this).children(cfg.virtualSelector).toggleClass(cfg.hoverClass);
         });
         return this;
     },
     click: function() {
         var cfg = this.config;
-        $(cfg.wrapperSelector).on('click', function() {
+        $(cfg.wrapperSelector).on('click', function(e) {
+            e.preventDefault();
             var checkbox = $(this).children(cfg.selector),
-                checked = checkbox.is(':checked'),
-                virtualCheckbox = checkbox.siblings(cfg.virtualSelector);
+                isChecked = checkbox.is(':checked');
 
-            console.log(checked);
-            if (checked) {
-                virtualCheckbox.removeClass(cfg.checkedClass);
+            console.log(isChecked);
+            if (!isChecked) {
+                checkbox.siblings(cfg.virtualSelector).addClass(cfg.checkedClass);
             } else {
-                virtualCheckbox.addClass(cfg.checkedClass);
+                checkbox.siblings(cfg.virtualSelector).removeClass(cfg.checkedClass);
             }
-
-            checkbox.prop('checked', !checked);
+            checkbox.prop('checked', !isChecked);
         });
         return this;
     }
