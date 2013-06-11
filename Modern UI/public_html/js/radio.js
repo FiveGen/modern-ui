@@ -37,7 +37,7 @@ var radio = {
     hover: function() {
         var cfg = this.config;
         $(cfg.wrapperSelector).hover(function() {
-            $(this).children(cfg.virtaulRadioSelector).toggleClass(cfg.hoverClass);
+            $(this).toggleClass(cfg.hoverClass);
         });
         return this;
     },
@@ -46,13 +46,13 @@ var radio = {
         $(cfg.wrapperSelector).children().on('click', function(e) {
             e.preventDefault();
         });
-        $(cfg.wrapperSelector).on('click', function(e) {
+        $(cfg.wrapperSelector).on('click', function() {
             $(this).siblings(cfg.wrapperSelector)
-                .children(cfg.virtualRadioSelector).removeClass(cfg.checkedClass)
-                .siblings(cfg.selector).prop('checked', false);
+                .removeClass(cfg.checkedClass)
+                .children(cfg.selector).prop('checked', false);
 
-            $(this).children(cfg.virtualRadioSelector).addClass(cfg.checkedClass)
-                .siblings(cfg.selector).prop('checked', true);
+            $(this).addClass(cfg.checkedClass)
+                .children(cfg.selector).prop('checked', true);
         });
         return this;
     }

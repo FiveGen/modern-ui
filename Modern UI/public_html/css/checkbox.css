@@ -39,11 +39,16 @@
     vertical-align: middle;
 }
 
-.checkbox-wrapper .checkbox.hover {
-    border: 2px solid rgb(190, 190, 190);
+/*Hover*/
+.checkbox-wrapper.hover {
     cursor: pointer;
 }
 
-.checkbox-wrapper .checkbox.checked {
+.checkbox-wrapper.hover .checkbox {
+    border: 2px solid rgb(190, 190, 190);
+}
+
+/*Checked*/
+.checkbox-wrapper.checked .checkbox {
     background: url(../img/checkbox-checked.png) no-repeat center center, rgb(255, 255, 255);
 }

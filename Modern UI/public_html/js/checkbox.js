@@ -40,7 +40,7 @@ var checkbox = {
     hover: function() {
         var cfg = this.config;
         $(cfg.wrapperSelector).hover(function() {
-            $(this).children(cfg.virtualSelector).toggleClass(cfg.hoverClass);
+            $(this).toggleClass(cfg.hoverClass);
         });
         return this;
     },
@@ -54,9 +54,9 @@ var checkbox = {
                 isChecked = checkbox.is(':checked');
 
             if (!isChecked) {
-                checkbox.siblings(cfg.virtualSelector).addClass(cfg.checkedClass);
+                $(this).addClass(cfg.checkedClass);
             } else {
-                checkbox.siblings(cfg.virtualSelector).removeClass(cfg.checkedClass);
+                $(this).removeClass(cfg.checkedClass);
             }
             checkbox.prop('checked', !isChecked);
         });

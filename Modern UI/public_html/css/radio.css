@@ -40,18 +40,22 @@
     vertical-align: middle;
 }
 
-.radio-wrapper .radio.hover,
-.radio-wrapper .radio.checked {
-    position: relative;
-}
-
-.radio-wrapper .radio.hover {
-    border: 2px solid rgb(190, 190, 190);
+/*Hover and Checked*/
+.radio-wrapper.hover {
     cursor: pointer;
 }
 
-.radio-wrapper .radio.checked:after,
-.radio-wrapper .radio.hover.checked:after {
+.radio-wrapper.hover .radio,
+.radio-wrapper.checked .radio {
+    position: relative;
+}
+
+.radio-wrapper.hover .radio {
+    border: 2px solid rgb(190, 190, 190);
+}
+
+.radio-wrapper.checked .radio:after,
+.radio-wrapper.checked.hover .radio:after {
     background-color: rgb(23, 99, 166);
     border-radius: 6px;
     content: '';
@@ -60,23 +64,12 @@
     width: 6px;
 }
 
-.radio-wrapper .radio.checked:after {
+.radio-wrapper.checked .radio:after {
     top: 4px;
     left: 4px;        
 }
 
-.radio-wrapper .radio.checked.hover:after {
+.radio-wrapper.checked.hover .radio:after {
     top: 3px;
     left: 3px;    
-}
-
-.radio:disabled {
-    border-color: rgb(230, 230, 230);
-    background-color: transparent;
-    cursor: default;
-}
-
-.radio:disabled + label {
-    cursor: default;
-    color: rgb(230, 230, 230);
 }
