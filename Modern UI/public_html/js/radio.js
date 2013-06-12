@@ -21,7 +21,9 @@ var radio = {
         checkedClass: 'checked'
     },
     init: function() {
-        return this.wrapper();
+        this.wrapper()
+            .hover()
+            .click();
     },
     wrapper: function() {
         var cfg = this.config;
@@ -61,7 +63,5 @@ var radio = {
 };
 
 jQuery(function($) {
-    radio.init()
-        .hover()
-        .click();
+    radio.init();
 });

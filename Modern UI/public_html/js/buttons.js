@@ -102,8 +102,63 @@ var toggleButton = {
     }
 };
 
-jQuery(function() {
-    iconButton.init();
-    toggleButton.init();
-    dropdownButton.init();
+var button = {
+    config: {
+        selector: 'button, input[type=button], input[type=submit], input[type=reset]',
+    },
+    init: function() {
+        this.hover()
+            .click();
+    },
+    hover: function() {
+        var cfg = this.config;
+        $(cfg.selector).hover(function() {
+            $(this).toggleClass('hover', 200);
+        });
+        return this;
+    },
+    click: function() {
+        var cfg = this.config,
+            elemPressed = null,
+            offset = 3;
+
+        $(cfg.selector).on('mousedown', function() {
+            elemPressed = $(this);
+            $(this).animate({
+                'padding-top': '-=' + offset + 'px',
+                'padding-right': '-=' + offset + 'px',
+                'padding-bottom': '-=' + offset + 'px',
+                'padding-left': '-=' + offset + 'px',
+                'margin-top': '+=' + offset + 'px',
+                'margin-right': '+=' + offset + 'px',
+                'margin-bottom': '+=' + offset + 'px',
+                'margin-left': '+=' + offset + 'px'
+            }, 50);
+        });
+
+        $(document).on('mouseup', function() {
+            if (elemPressed === null)
+                return;
+
+            elemPressed.animate({
+                'padding-top': '+=' + offset + 'px',
+                'padding-right': '+=' + offset + 'px',
+                'padding-bottom': '+=' + offset + 'px',
+                'padding-left': '+=' + offset + 'px',
+                'margin-top': '-=' + offset + 'px',
+                'margin-right': '-=' + offset + 'px',
+                'margin-bottom': '-=' + offset + 'px',
+                'margin-left': '-=' + offset + 'px'
+            }, 50);
+            elemPressed = null;
+        });
+        return this;
+    }
+};
+
+jQuery(function($) {
+    button.init();
+//    iconButton.init();
+//    toggleButton.init();
+//    dropdownButton.init();
 });

@@ -159,3 +159,27 @@ input[type=radio]:disabled + label {
     top: 2px;
     left: 38px;
 }
+
+.form-actions {
+    margin: 20px 0 0 0;
+}
+
+.form-actions:after {
+    clear: both;
+    content: '';
+    display: table;
+    height: 0;
+    width: 0;
+}
+
+.form-actions .buttons-area {
+    float: right;
+}
+
+.form-actions .buttons-area input[type=button],
+.form-actions .buttons-area input[type=submit],
+.form-actions .buttons-area input[type=reset],
+.form-actions .buttons-area button {
+    vertical-align: middle;
+    margin-left: 5px;
+}
