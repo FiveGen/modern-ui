@@ -27,11 +27,14 @@ var checkbox = {
         var cfg = this.config;
         $(cfg.selector).each(function() {
             $(this).after(cfg.virtualElem)
-                .next().addClass(cfg.virtualClass);
-
-            $(this).nextUntil(cfg.selector)
+                .next().addClass(cfg.virtualClass)
+                .end().nextUntil(cfg.selector)
                 .andSelf().wrapAll(cfg.wrapperElem)
                 .parent().addClass(cfg.wrapperClass);
+
+            if ($(this).is(':checked')) {
+                $(this).parent(cfg.wrapperSelector).addClass(cfg.checkedClass);
+            }
         });
         return this;
     },

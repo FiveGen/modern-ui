@@ -26,9 +26,13 @@ var radio = {
     wrapper: function() {
         var cfg = this.config;
         $(cfg.selector).each(function() {
-            $(this).after(cfg.virtualRadioElem).next().addClass(cfg.virtualRadioClass);
-            $(this).nextUntil(cfg.selector).andSelf()
+            $(this).after(cfg.virtualRadioElem).next().addClass(cfg.virtualRadioClass)
+                .end().nextUntil(cfg.selector).andSelf()
                 .wrapAll(cfg.wrapperElem).parent().addClass(cfg.wrapperClass);
+
+            if ($(this).is(':checked')) {
+                $(this).parent(cfg.wrapperSelector).addClass(cfg.checkedClass);
+            }
         });
         return this;
     },
