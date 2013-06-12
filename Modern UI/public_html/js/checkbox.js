@@ -21,9 +21,7 @@ var checkbox = {
         checkedClass: 'checked'
     },
     init: function() {
-        this.wrapper()
-            .hover()
-            .click();
+        return this.wrapper();
     },
     wrapper: function() {
         var cfg = this.config;
@@ -65,5 +63,7 @@ var checkbox = {
 };
 
 jQuery(function($) {
-    checkbox.init();
+    checkbox.init()
+        .hover()
+        .click();
 });
