@@ -1,3 +1,9 @@
+/*
+ *  @todo Criar botões com ícones. Mexer no padding e usar background image para renderizar a image. A url deve ser escificada no atributo data-icon="";
+ *  @todo Criar o dropdown button customizado.
+ *  @todo Criar slide toggle buttons baseados em http://bashooka.com/wp-content/uploads/2013/03/flat-ui-inspiration-58.jpg e em http://pinterest.com/pin/112871534383411673/
+ *  @todo Ao fazer o toggle button, dar uma olhada no jquery ui para saber como fazer um bom plugin: Ex: Tabs. Ele não deve conflitar com o checkbox normal.
+ */
 
 var dropdownButton = {
     config: {
@@ -104,7 +110,7 @@ var toggleButton = {
 
 var button = {
     config: {
-        selector: 'button, input[type=button], input[type=submit], input[type=reset]',
+        selector: 'button, input[type=button], input[type=submit], input[type=reset]'
     },
     init: function() {
         this.hover()
@@ -113,7 +119,7 @@ var button = {
     hover: function() {
         var cfg = this.config;
         $(cfg.selector).hover(function() {
-            $(this).toggleClass('hover', 200);
+            $(this).toggleClass('hover', 150);
         });
         return this;
     },
@@ -158,6 +164,7 @@ var button = {
 
 jQuery(function($) {
     button.init();
+//    buttonWithIcon.init();
 //    iconButton.init();
 //    toggleButton.init();
 //    dropdownButton.init();
