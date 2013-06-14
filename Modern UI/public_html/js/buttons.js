@@ -69,20 +69,20 @@ var dropdownButton = {
     }
 };
 
-var iconButton = {
-    selector: "button[data-icon]",
-    init: function() {
-        $(this.selector).each(function() {
-            var bgImage = $(this).attr('data-icon');
-            $('<span class="icon">').appendTo($(this)).css({
-                'background-image': 'url(' + bgImage + ')',
-                'background-position': 'center center',
-                'background-repeat': 'no-repeat',
-                'background-size': '16px'
-            });
-        });
-    }
-};
+//var iconButton = {
+//    selector: "button[data-icon]",
+//    init: function() {
+//        $(this.selector).each(function() {
+//            var bgImage = $(this).attr('data-icon');
+//            $('<span class="icon">').appendTo($(this)).css({
+//                'background-image': 'url(' + bgImage + ')',
+//                'background-position': 'center center',
+//                'background-repeat': 'no-repeat',
+//                'background-size': '16px'
+//            });
+//        });
+//    }
+//};
 
 var toggleButton = {
     selector: 'span.toggle-button',
@@ -110,7 +110,11 @@ var toggleButton = {
 
 var button = {
     config: {
-        selector: 'button, input[type=button], input[type=submit], input[type=reset]'
+        selector:
+            'button, ' +
+            'input[type=button], ' +
+            'input[type=submit], ' +
+            'input[type=reset]'
     },
     init: function() {
         this.hover()
@@ -130,15 +134,12 @@ var button = {
 
         $(cfg.selector).on('mousedown', function() {
             elemPressed = $(this);
+
             $(this).animate({
                 'padding-top': '-=' + offset + 'px',
                 'padding-right': '-=' + offset + 'px',
                 'padding-bottom': '-=' + offset + 'px',
-                'padding-left': '-=' + offset + 'px',
-                'margin-top': '+=' + offset + 'px',
-                'margin-right': '+=' + offset + 'px',
-                'margin-bottom': '+=' + offset + 'px',
-                'margin-left': '+=' + offset + 'px'
+                'padding-left': '-=' + offset + 'px'
             }, 50);
         });
 
@@ -150,11 +151,7 @@ var button = {
                 'padding-top': '+=' + offset + 'px',
                 'padding-right': '+=' + offset + 'px',
                 'padding-bottom': '+=' + offset + 'px',
-                'padding-left': '+=' + offset + 'px',
-                'margin-top': '-=' + offset + 'px',
-                'margin-right': '-=' + offset + 'px',
-                'margin-bottom': '-=' + offset + 'px',
-                'margin-left': '-=' + offset + 'px'
+                'padding-left': '+=' + offset + 'px'
             }, 50);
             elemPressed = null;
         });
@@ -162,8 +159,55 @@ var button = {
     }
 };
 
+var iconButton = {
+    config: {
+        selector:
+            'input[type=button][data-icon], ' +
+            'input[type=submit][data-icon], ' +
+            'input[type=reset][data-icon], ' +
+            'button[data-icon]'
+    },
+    init: function() {
+        $(this.config.selector).each(function() {
+            var cssMod = $.extend(iconButton.getCssMod($(this)), {
+                'background-image': 'url(' + $(this).attr('data-icon') + ')',
+                'background-repeat': 'no-repeat',
+                'background-position': '10px center'
+            });
+
+            $(this).css(cssMod);
+        });
+    },
+    getCssMod: function(elem) {
+        var paddingLeft = null,
+            backgroundSize = null;
+
+        if (elem.hasClass('smaller')) {
+            paddingLeft = 10;
+            backgroundSize = 10;
+        } else if (elem.hasClass('small')) {
+            paddingLeft = 10;
+            backgroundSize = 10;
+        } else if (elem.hasClass('big')) {
+            paddingLeft = 10;
+            backgroundSize = 10;
+        } else if (elem.hasClass('bigger')) {
+            paddingLeft = 10;
+            backgroundSize = 10;
+        } else {
+            paddingLeft = 20;
+            backgroundSize = 20;
+        }
+        return {
+            'padding-left': '+=' + paddingLeft + 'px',
+            'background-size': backgroundSize
+        };
+    }
+};
+
 jQuery(function($) {
     button.init();
+    iconButton.init();
 //    buttonWithIcon.init();
 //    iconButton.init();
 //    toggleButton.init();
