@@ -180,6 +180,5 @@ input[type=radio]:disabled + label {
 .form-actions .buttons-area input[type=submit],
 .form-actions .buttons-area input[type=reset],
 .form-actions .buttons-area button {
-    vertical-align: middle;
-    margin-left: 5px;
+    margin-left: 10px;
 }

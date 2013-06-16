@@ -4,11 +4,13 @@ input[type=button],
 input[type=submit],
 input[type=reset],
 button {
-    border: none;
+    background-clip: padding-box;
+    background-origin: border-box;
+    border: 0px solid transparent;
+    box-sizing: border-box;
     display: inline-block;
     font-family: 'Open Sans';
     font-weight: 600;
-    box-sizing: border-box;
 }
 
 /*Colors*/
@@ -98,7 +100,8 @@ input[type=submit],
 input[type=reset],
 button {
     font-size: 14px;
-    padding: 5px 20px;
+    width: 90px;
+    height: 30px
 }
 
 input[type=button].big,

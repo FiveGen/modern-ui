@@ -130,29 +130,23 @@ var button = {
     click: function() {
         var cfg = this.config,
             elemPressed = null,
-            offset = 3;
+            offset = 2;
 
         $(cfg.selector).on('mousedown', function() {
             elemPressed = $(this);
-
-            $(this).animate({
-                'padding-top': '-=' + offset + 'px',
-                'padding-right': '-=' + offset + 'px',
-                'padding-bottom': '-=' + offset + 'px',
-                'padding-left': '-=' + offset + 'px'
-            }, 50);
+            elemPressed.animate({
+                'padding': '-=' + offset,
+                'borderWidth': offset
+            }, 40);
         });
 
         $(document).on('mouseup', function() {
             if (elemPressed === null)
                 return;
-
             elemPressed.animate({
-                'padding-top': '+=' + offset + 'px',
-                'padding-right': '+=' + offset + 'px',
-                'padding-bottom': '+=' + offset + 'px',
-                'padding-left': '+=' + offset + 'px'
-            }, 50);
+                'padding': '+=' + offset,
+                'borderWidth': 0
+            }, 40);
             elemPressed = null;
         });
         return this;
@@ -213,3 +207,16 @@ jQuery(function($) {
 //    toggleButton.init();
 //    dropdownButton.init();
 });
+
+
+//$('.a').mouseenter(function(){
+//    $('.b').animate({
+//        'padding': 0,
+//        'borderWidth': 10
+//    });
+//}).mouseleave(function(){
+//    $('.b').animate({
+//        'padding': 10,
+//        'borderWidth': 0
+//    });
+//});
