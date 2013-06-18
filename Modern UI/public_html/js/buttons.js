@@ -133,8 +133,14 @@ var button = {
             offset = 2;
 
         $(cfg.selector).on('mousedown', function() {
+            var height = $(this).css('height'),
+                width = $(this).css('width');
+
             elemPressed = $(this);
-            elemPressed.animate({
+            elemPressed.css({
+                'height': height,
+                'width': width
+            }).animate({
                 'padding': '-=' + offset,
                 'borderWidth': offset
             }, 40);
@@ -143,6 +149,7 @@ var button = {
         $(document).on('mouseup', function() {
             if (elemPressed === null)
                 return;
+
             elemPressed.animate({
                 'padding': '+=' + offset,
                 'borderWidth': 0
