@@ -1,5 +1,4 @@
 /*
- *  @todo Criar botões com ícones. Mexer no padding e usar background image para renderizar a image. A url deve ser escificada no atributo data-icon="";
  *  @todo Criar o dropdown button customizado.
  *  @todo Criar slide toggle buttons baseados em http://bashooka.com/wp-content/uploads/2013/03/flat-ui-inspiration-58.jpg e em http://pinterest.com/pin/112871534383411673/
  *  @todo Ao fazer o toggle button, dar uma olhada no jquery ui para saber como fazer um bom plugin: Ex: Tabs. Ele não deve conflitar com o checkbox normal.
@@ -69,21 +68,6 @@ var dropdownButton = {
     }
 };
 
-//var iconButton = {
-//    selector: "button[data-icon]",
-//    init: function() {
-//        $(this.selector).each(function() {
-//            var bgImage = $(this).attr('data-icon');
-//            $('<span class="icon">').appendTo($(this)).css({
-//                'background-image': 'url(' + bgImage + ')',
-//                'background-position': 'center center',
-//                'background-repeat': 'no-repeat',
-//                'background-size': '16px'
-//            });
-//        });
-//    }
-//};
-
 var toggleButton = {
     selector: 'span.toggle-button',
     init: function() {
@@ -121,18 +105,16 @@ var button = {
             .click();
     },
     hover: function() {
-        var cfg = this.config;
-        $(cfg.selector).hover(function() {
+        $(this.config.selector).hover(function() {
             $(this).toggleClass('hover', 150);
         });
         return this;
     },
     click: function() {
-        var cfg = this.config,
-            elemPressed = null,
-            offset = 2;
+        var elemPressed = null,
+            paddingOffset = 2;
 
-        $(cfg.selector).on('mousedown', function() {
+        $(this.config.selector).on('mousedown', function() {
             var height = $(this).css('height'),
                 width = $(this).css('width');
 
@@ -141,9 +123,9 @@ var button = {
                 'height': height,
                 'width': width
             }).animate({
-                'padding': '-=' + offset,
-                'borderWidth': offset
-            }, 40);
+                'padding': '-=' + paddingOffset,
+                'borderWidth': paddingOffset
+            }, 50);
         });
 
         $(document).on('mouseup', function() {
@@ -151,9 +133,9 @@ var button = {
                 return;
 
             elemPressed.animate({
-                'padding': '+=' + offset,
+                'padding': '+=' + paddingOffset,
                 'borderWidth': 0
-            }, 40);
+            }, 50);
             elemPressed = null;
         });
         return this;
@@ -172,36 +154,42 @@ var iconButton = {
         $(this.config.selector).each(function() {
             var cssMod = $.extend(iconButton.getCssMod($(this)), {
                 'background-image': 'url(' + $(this).attr('data-icon') + ')',
-                'background-repeat': 'no-repeat',
-                'background-position': '10px center'
+                'background-repeat': 'no-repeat'
             });
 
             $(this).css(cssMod);
         });
     },
     getCssMod: function(elem) {
-        var paddingLeft = null,
-            backgroundSize = null;
+        var paddingLeft,
+            backgroundSize,
+            backgroundPosition;
 
         if (elem.hasClass('smaller')) {
-            paddingLeft = 10;
-            backgroundSize = 10;
+            paddingLeft = 22;
+            backgroundSize = 12;
+            backgroundPosition = 5;
         } else if (elem.hasClass('small')) {
-            paddingLeft = 10;
-            backgroundSize = 10;
+            paddingLeft = 30;
+            backgroundSize = 16;
+            backgroundPosition = 7;
         } else if (elem.hasClass('big')) {
-            paddingLeft = 10;
-            backgroundSize = 10;
+            paddingLeft = 52;
+            backgroundSize = 24;
+            backgroundPosition = 14;
         } else if (elem.hasClass('bigger')) {
-            paddingLeft = 10;
-            backgroundSize = 10;
+            paddingLeft = 64;
+            backgroundSize = 32;
+            backgroundPosition = 16;
         } else {
-            paddingLeft = 20;
+            paddingLeft = 40;
             backgroundSize = 20;
+            backgroundPosition = 10;
         }
         return {
-            'padding-left': '+=' + paddingLeft + 'px',
-            'background-size': backgroundSize
+            'padding-left': paddingLeft,
+            'background-size': backgroundSize,
+            'background-position': backgroundPosition + 'px center'
         };
     }
 };
@@ -209,21 +197,6 @@ var iconButton = {
 jQuery(function($) {
     button.init();
     iconButton.init();
-//    buttonWithIcon.init();
-//    iconButton.init();
 //    toggleButton.init();
 //    dropdownButton.init();
 });
-
-
-//$('.a').mouseenter(function(){
-//    $('.b').animate({
-//        'padding': 0,
-//        'borderWidth': 10
-//    });
-//}).mouseleave(function(){
-//    $('.b').animate({
-//        'padding': 10,
-//        'borderWidth': 0
-//    });
-//});
