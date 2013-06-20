@@ -1,10 +1,14 @@
 
 table {
-
+    width: 100%;
+    font-family: 'Open Sans';
+    border-top: 3px solid rgb(189, 195, 199);
+    border-bottom: 3px solid rgb(189, 195, 199);
 }
 
 table thead {
-
+    background-color: rgb(236, 240, 241);
+    line-height: 28px;
 }
 
 table thead tr {
@@ -12,11 +16,15 @@ table thead tr {
 }
 
 table thead tr th {
-
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+    text-align: left;
 }
 
 table tbody {
-
+    font-size: 12px;
+    line-height: 22px;
 }
 
 table tbody tr {
@@ -24,11 +32,12 @@ table tbody tr {
 }
 
 table tbody tr td {
-
+    padding-left: 5px;
 }
 
 table tfoot {
-
+    background-color: rgb(236, 240, 241);
+    line-height: 28px;
 }
 
 table tfoot tr {
@@ -36,5 +45,17 @@ table tfoot tr {
 }
 
 table tfoot tr td {
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+    text-align: left;
+}
+
+/*Stripped table*/
+table.stripped tbody tr:nth-child(even) {
+
+}
+
+table.stripped tbody tr:nth-child(odd) {
 
 }
