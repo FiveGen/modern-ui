@@ -3,7 +3,7 @@ table {
     width: 100%;
     font-family: 'Open Sans';
     border-top: 3px solid rgb(189, 195, 199);
-    border-bottom: 3px solid rgb(189, 195, 199);
+    border-bottom: 1px solid rgb(189, 195, 199);
 }
 
 table thead {
@@ -22,13 +22,25 @@ table thead tr th {
     text-align: left;
 }
 
+table thead tr th.sortable {
+
+}
+
+table thead tr th.sort-asc {
+
+}
+
+table thead tr th.sort-desc {
+
+}
+
 table tbody {
     font-size: 12px;
     line-height: 22px;
 }
 
 table tbody tr {
-
+    border-bottom: 1px solid rgb(236, 240, 241);
 }
 
 table tbody tr td {
@@ -37,7 +49,7 @@ table tbody tr td {
 
 table tfoot {
     background-color: rgb(236, 240, 241);
-    line-height: 28px;
+    line-height: 22px;
 }
 
 table tfoot tr {
@@ -45,8 +57,8 @@ table tfoot tr {
 }
 
 table tfoot tr td {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
     padding-left: 5px;
     text-align: left;
 }

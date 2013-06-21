@@ -46,3 +46,35 @@
     box-sizing: border-box;
     padding: 15px;
 }
+
+.footer {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 300px;
+    overflow: auto;
+}
+
+.footer .container {
+    width: 550px;
+    height: 70px;
+    margin: 115px auto;
+    display: table;
+}
+
+.footer .container .logo {
+    width: 120px;
+    height: 70px;
+    display: table-cell;
+    background: url(../img/npd-logo.png) center no-repeat;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footer .container .contact {
+    font-size: 11px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(100, 100, 100);
+}
