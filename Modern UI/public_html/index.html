@@ -42,184 +42,180 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-        <div>
-            <div class="header">
-                <div class="container">
-                    <div class="title-box">
+        <div class="header">
+            <div class="container">
+                <div class="title-box">
 
-                    </div>
                 </div>
             </div>
-            <div class="body">
-                <div class="container">
-                    <div class="left-column">
-                        <div class="content">
-                            <span class="navbar-title">
-                                Navegação
-                            </span>
-                            <ul class="navbar">
-                                <li><a>Cadastros</a></li>
-                                <li><a>Registros</a></li>
-                                <li><a>Relatórios</a></li>
-                                <li><a>Notificações</a></li>
-                                <li><a>Suporte</a></li>
-                                <li><a>Ajuda</a></li>
-                                <li><a>Sair</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="main-column">
-                        <div class="breadcrumb">
-                            <ul>
-                                <li>Início</li>
-                                <li>Cadastro</li>
-                                <li>Aluno</li>
-                                <li>Ver todos</li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <h1>Cadastrar Aluno</h1>
-                            <form>
+        </div>
+        <div class="body">
+            <div class="left-column">
+                <div class="content">
+                    <span class="navbar-title">
+                        Navegação
+                    </span>
+                    <ul class="navbar">
+                        <li><a>Cadastros</a></li>
+                        <li><a>Registros</a></li>
+                        <li><a>Relatórios</a></li>
+                        <li><a>Notificações</a></li>
+                        <li><a>Suporte</a></li>
+                        <li><a>Ajuda</a></li>
+                        <li><a>Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-column">
+                <div class="breadcrumb">
+                    <ul>
+                        <li>Início</li>
+                        <li>Cadastro</li>
+                        <li>Aluno</li>
+                        <li>Ver todos</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h1>Cadastrar Aluno</h1>
+                    <form>
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <div class="row">
+                                <div class="colspan6">
+                                    <label>Nome</label>
+                                    <input type="text" name="nome" />
+                                </div>
+                                <div class="colspan3">
+                                    <label>RG</label>
+                                    <input type="text" name="rg" />
+                                </div>
+                                <div class="colspan3">
+                                    <label>CPF</label>
+                                    <input type="text" name="cpf" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="colspan12">
+                                    <label>Endereço</label>
+                                    <input type="text" name="endereco" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset6 colspan4">
+                                    <label>Observação</label>
+                                    <input type="text" name="obs" />
+                                </div>
+                                <div class="colspan2">
+                                    <label>Outros</label>
+                                    <input type="text" name="outros" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="colspan6">
                                 <fieldset>
-                                    <legend>Dados Pessoais</legend>
-                                    <div class="row">
-                                        <div class="colspan6">
-                                            <label>Nome</label>
-                                            <input type="text" name="nome" />
-                                        </div>
-                                        <div class="colspan3">
-                                            <label>RG</label>
-                                            <input type="text" name="rg" />
-                                        </div>
-                                        <div class="colspan3">
-                                            <label>CPF</label>
-                                            <input type="text" name="cpf" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="colspan12">
-                                            <label>Endereço</label>
-                                            <input type="text" name="endereco" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="offset6 colspan4">
-                                            <label>Observação</label>
-                                            <input type="text" name="obs" />
-                                        </div>
-                                        <div class="colspan2">
-                                            <label>Outros</label>
-                                            <input type="text" name="outros" />
-                                        </div>
-                                    </div>
+                                    <legend>Radios</legend>
+                                    <input id="radio1" type="radio" value="radio1" name="radio" />
+                                    <label for="radio1">Radio1</label>
+                                    <input id="radio2" type="radio" value="radio2" name="radio" />
+                                    <label for="radio2">Radio2</label>
+                                    <input id="radio3" type="radio" value="radio3" name="radio" checked="checked"/>
+                                    <label for="radio3">Radio3</label>
                                 </fieldset>
-                                <div class="row">
-                                    <div class="colspan6">
-                                        <fieldset>
-                                            <legend>Radios</legend>
-                                            <input id="radio1" type="radio" value="radio1" name="radio" />
-                                            <label for="radio1">Radio1</label>
-                                            <input id="radio2" type="radio" value="radio2" name="radio" />
-                                            <label for="radio2">Radio2</label>
-                                            <input id="radio3" type="radio" value="radio3" name="radio" checked="checked"/>
-                                            <label for="radio3">Radio3</label>
-                                        </fieldset>
-                                    </div>
-                                    <div class="colspan6">
-                                        <fieldset>
-                                            <legend>Checkboxes</legend>
-                                            <input id="chk1" type="checkbox" value="value1" name="checkbox1" checked="checked"/>
-                                            <label for="chk1">Checkbox1</label>
-                                            <input id="chk2" type="checkbox" value="value2" name="checkbox2" />
-                                            <label for="chk2">Checkbox2</label>
-                                            <input id="chk3" type="checkbox" value="value3" name="checkbox3" />
-                                            <label for="chk3">Checkbox3</label>
-                                            <input id="chk4" type="checkbox" value="value4" name="checkbox4" checked="checked"/>
-                                            <label for="chk4">Checkbox4</label>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <!--                                <fieldset>
-                                                                    <legend>Buttons</legend>
-                                                                    <div class="row">
-                                                                        <div class="colspan12">
-                                                                            <input class="black smaller" type="button" value="Salvar" />
-                                                                            <input class="pink small" type="button" value="Salvar" />
-                                                                            <input class="blue" type="button" value="Salvar" />
-                                                                            <input class="green big" type="button" value="Salvar" />
-                                                                            <input class="yellow bigger" type="button" value="Salvar" />
-                                                                            <input class="orange" type="button" value="Salvar" />
-                                                                            <input class="red" type="submit" value="Salvar" />
-                                                                            <button type="button">Salvar</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </fieldset>-->
-                                <div class="row">
-                                    <div class="colspan12">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>col1</th>
-                                                    <th>col2</th>
-                                                    <th>col3</th>
-                                                    <th>col4</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>data1</td>
-                                                    <td>data2</td>
-                                                    <td>data3</td>
-                                                    <td>data4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>data1</td>
-                                                    <td>data2</td>
-                                                    <td>data3</td>
-                                                    <td>data4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>data1</td>
-                                                    <td>data2</td>
-                                                    <td>data3</td>
-                                                    <td>data4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>data1</td>
-                                                    <td>data2</td>
-                                                    <td>data3</td>
-                                                    <td>data4</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td>foot1</td>
-                                                    <td>foot2</td>
-                                                    <td>foot3</td>
-                                                    <td>foot4</td>
-                                                </tr>                                                
-                                            </tfoot>
-                                        </table>  
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <div class="buttons-area">
-                                        <input type="button" data-icon="img/icon-exit-24x24-normal.png" value="Voltar" />
-                                        <input class="blue" type="button" value="Salvar" />
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+                            <div class="colspan6">
+                                <fieldset>
+                                    <legend>Checkboxes</legend>
+                                    <input id="chk1" type="checkbox" value="value1" name="checkbox1" checked="checked"/>
+                                    <label for="chk1">Checkbox1</label>
+                                    <input id="chk2" type="checkbox" value="value2" name="checkbox2" />
+                                    <label for="chk2">Checkbox2</label>
+                                    <input id="chk3" type="checkbox" value="value3" name="checkbox3" />
+                                    <label for="chk3">Checkbox3</label>
+                                    <input id="chk4" type="checkbox" value="value4" name="checkbox4" checked="checked"/>
+                                    <label for="chk4">Checkbox4</label>
+                                </fieldset>
+                            </div>
                         </div>
-                    </div>
+                        <!--                                <fieldset>
+                                                            <legend>Buttons</legend>
+                                                            <div class="row">
+                                                                <div class="colspan12">
+                                                                    <input class="black smaller" type="button" value="Salvar" />
+                                                                    <input class="pink small" type="button" value="Salvar" />
+                                                                    <input class="blue" type="button" value="Salvar" />
+                                                                    <input class="green big" type="button" value="Salvar" />
+                                                                    <input class="yellow bigger" type="button" value="Salvar" />
+                                                                    <input class="orange" type="button" value="Salvar" />
+                                                                    <input class="red" type="submit" value="Salvar" />
+                                                                    <button type="button">Salvar</button>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>-->
+                        <div class="row">
+                            <div class="colspan12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Endereço</th>
+                                            <th>Data de Início</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>data1</td>
+                                            <td>data2</td>
+                                            <td>data3</td>
+                                            <td>data4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data1</td>
+                                            <td>data2</td>
+                                            <td>data3</td>
+                                            <td>data4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data1</td>
+                                            <td>data2</td>
+                                            <td>data3</td>
+                                            <td>data4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data1</td>
+                                            <td>data2</td>
+                                            <td>data3</td>
+                                            <td>data4</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>foot1</td>
+                                            <td>foot2</td>
+                                            <td>foot3</td>
+                                            <td>foot4</td>
+                                        </tr>                                                
+                                    </tfoot>
+                                </table>  
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="buttons-area">
+                                <input type="button" data-icon="img/icon-exit-24x24-normal.png" value="Voltar" />
+                                <input class="blue" type="button" value="Salvar" />
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <div class="footer">
-                <div class="container">
-                    <div class="logo"></div>
-                    <div class="contact">
-                        Av. Fernando Ferrari, 514, Goiabeiras | Vitória, ES ─ CEP 29075-910 <br/>
-                        Universidade Federal do Espírito Santo. Núcleo de Processamento de Dados <br/> 
-                        © 2013. Todos os direitos reservados
+                <div class="footer">
+                    <div class="container">
+                        <div class="logo"></div>
+                        <div class="contact">
+                            Av. Fernando Ferrari, 514, Goiabeiras | Vitória, ES ─ CEP 29075-910 <br/>
+                            Universidade Federal do Espírito Santo. Núcleo de Processamento de Dados <br/> 
+                            © 2013. Todos os direitos reservados
+                        </div>
                     </div>
                 </div>
             </div>
